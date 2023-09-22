@@ -33,7 +33,7 @@ public class FloppyMidiPlayer {
             System.exit(0);
         }
 
-        /* Playing the MIDI files */
+        /* Playing the MIDI files one after the other, scans the floppy after each song in order to catch a diskette change if occurred */
         while (true) {
             List<File> midiFiles = getListOfMidiFilesFromFloppy(floppyDrive);
             for (int i = 0; i < midiFiles.size(); i++) {
