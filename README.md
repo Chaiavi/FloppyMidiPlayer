@@ -4,7 +4,7 @@ Scans your **Floppy drive** and plays the Midi files existing on it (Originally 
 
 ## Main Features
 
-- Plays automatically, no need to do anything
+- Plays automatically, no need to do anything, just run the jar file and use the keyboard controls
 - As simple as it gets
 - Supports Jre11 and up in order to be played even on Raspberry pies
 - Simple controls
