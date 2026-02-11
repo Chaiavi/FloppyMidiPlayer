@@ -3,6 +3,7 @@
 **Turn your floppy drive into a retro MIDI jukebox.**
 
 Scans your floppy drive for MIDI files and plays them automatically — originally built for the Raspberry Pi.
+Uses no UI (Future support for output screens to show Midi Infoo like the song name etc)
 
 ---
 
