@@ -1,25 +1,42 @@
-# FloppyMidiPlayer
+# 💾 FloppyMidiPlayer
 
-Scans your **Floppy drive** and plays the Midi files existing on it (Originally was created for the Raspberry Pie)
+**Turn your floppy drive into a retro MIDI jukebox.**
 
-## Main Features
+Scans your floppy drive for MIDI files and plays them automatically — originally built for the Raspberry Pi.
 
-- Plays automatically, no need to do anything, just run the jar file and use the keyboard controls
-- As simple as it gets
-- Supports Jre11 and up in order to be played even on Raspberry pies
-- Simple controls
-  - Use the left/right arrow keys to jump forward +-5 seconds
-  - Use the up/down arrow keys to jump to next/previous midi file
-  - Use the spacebar to pause the current Midi file
-  - Use ESC in order to shutdown the player
-- Supports swapping of the diskette while playing in order to play midi files from the new diskette
-- Uses the excellent [midi4j library](https://github.com/Chaiavi/midi4j)
+---
 
-## Note
 
-In order to capture the keyboard controls, a JFrame is created and captures keyboard controls  
-This was done as a hack as there is no simple way of capturing single key keyboard I/O in Java!
+## ✨ Features
 
-Scanner captures only full lines  
-Console doesn't work on the IDE
-JLine is a too-big-library for such a task and is way too complicated for this simple task.
+- **Plug & Play** — Just run the JAR file. The player automatically detects and plays MIDI files from your floppy drive.
+- **Hot-Swap Support** — Swap diskettes on the fly and the player picks up MIDI files from the new disk.
+- **Lightweight & Simple** — Minimal setup, minimal dependencies.
+- **Broad Compatibility** — Supports JRE 11+, making it easy to run on Raspberry Pi and other low-resource devices.
+- **Powered by [midi4j](https://github.com/Chaiavi/midi4j)** — Built on top of an excellent MIDI library for Java.
+
+## 🎹 Keyboard Controls
+
+| Key | Action |
+|-----|--------|
+| `←` / `→` | Skip backward / forward 5 seconds |
+| `↑` / `↓` | Next / previous MIDI file |
+| `Space` | Pause / resume playback |
+| `Esc` | Quit the player |
+
+## 🚀 Getting Started
+
+1. Insert a floppy disk containing `.mid` files.
+2. Run the player:
+   ```bash
+   java -jar FloppyMidiPlayer.jar
+   ```
+3. Enjoy the music! Use the keyboard controls above to navigate.
+
+## 📝 Technical Note
+
+> To capture keyboard input, the player creates a `JFrame` window that listens for key events. This is a pragmatic workaround for Java's limited support for single-key keyboard I/O:
+>
+> - `Scanner` only captures full lines
+> - `Console` doesn't work inside most IDEs
+> - `JLine` is overly complex for this use case
